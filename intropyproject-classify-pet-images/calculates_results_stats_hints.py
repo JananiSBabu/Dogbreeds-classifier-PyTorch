@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/calculates_results_stats_hints.py
 #                                                                             
-# PROGRAMMER:
-# DATE CREATED:                                  
+# PROGRAMMER: Janani S. Babu
+# DATE CREATED: 6/4/2020                                 
 # REVISED DATE: 
 # PURPOSE: This is a *hints* file to help guide students in creating the 
 #          function calculates_results_stats that calculates the statistics

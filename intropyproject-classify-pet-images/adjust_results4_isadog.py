@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/adjust_results4_isadog.py
 #                                                                             
-# PROGRAMMER: 
-# DATE CREATED:                                 
+# PROGRAMMER: Janani S. Babu    
+# DATE CREATED: 6/4/2020                                
 # REVISED DATE: 
 # PURPOSE: Create a function adjust_results4_isadog that adjusts the results 
 #          dictionary to indicate whether or not the pet image label is of-a-dog, 
@@ -67,4 +67,40 @@ def adjust_results4_isadog(results_dic, dogfile):
     Returns:
            None - results_dic is mutable data type so no return needed.
     """           
+    dognames_dic = dict()
+    idx = 0
+
+    # Reads in dognames from file, 1 name per line & automatically closes file
+    with open(dogfile, "r") as infile:
+        # Reads in dognames from first line in file
+        line = infile.readline()
+
+        # Processes each line in file until reaching EOF (end-of-file) by 
+        # processing line and adding dognames to dognames_dic with while loop
+        while line != "":
+
+            # populate contents to dict entries
+            dognames_dic[idx] = line.strip()
+            idx += 1
+
+            # Reads in next line in file to be processed with while loop
+            # if this line isn't empty (EOF)
+            line = infile.readline()
+
+    # print("***\n\n dognames_dic  :  ", )
+    # for k, v in dognames_dic.items():
+    #     print(k, " : ", v)
+
+            
+    for key in results_dic:
+        
+        is_dog_pet_label = int(results_dic[key][0] in  dognames_dic.values())
+        as_dog_classifier_label = int(results_dic[key][1] in  dognames_dic.values())
+            
+        # results_dic[key].append(is_dog_pet_label)               
+        # results_dic[key].append(as_dog_classifier_label) 
+        
+        # updating two values at the same time using extend()
+        results_dic[key].extend((is_dog_pet_label, as_dog_classifier_label))  
+        
     None
