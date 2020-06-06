@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# */AIPND-revision/intropyproject-classify-pet-images/test_classifier.py
+# */AIPND/intropylab-classifying-images/test_classifier.py
 #                                                                             
 # PROGRAMMER: Jennifer S.                                                    
 # DATE CREATED: 01/30/2018                                  
@@ -18,7 +18,9 @@
 from classifier import classifier 
 
 # Defines a dog test image from pet_images folder
-test_image="pet_images/Collie_03797.jpg"
+test_image="pet_images/German_shorthaired_pointer_04986.jpg"
+test_image="pet_images/Cocker_spaniel_03750.jpg"
+
 
 # Defines a model architecture to be used for classification
 # NOTE: this function only works for model architectures: 

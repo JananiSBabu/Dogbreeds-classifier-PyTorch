@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/print_results.py
 #                                                                             
-# PROGRAMMER: 
-# DATE CREATED:
+# PROGRAMMER: Janani S. Babu
+# DATE CREATED: 06/05/2020
 # REVISED DATE: 
 # PURPOSE: Create a function print_results that prints the results statistics
 #          from the results statistics dictionary (results_stats_dic). It 
@@ -61,6 +61,44 @@ def print_results(results_dic, results_stats_dic, model,
                               False doesn't print anything(default) (bool) 
     Returns:
            None - simply printing results.
-    """    
+    """        
+    
+    # Prints summary statistics over the run
+    print("\n\n*** Results Summary for CNN Model Architecture",model.upper(), 
+          "***")
+    print("{:20}: {:3d}".format('N Images', results_stats_dic['n_images']))
+    print("{:20}: {:3d}".format('N Dog Images', results_stats_dic['n_dogs_img']))
+    
+    print("{:20}: {:3d}".format('N Not-Dog Images', results_stats_dic['n_notdogs_img']))
+    
+    
+    # Prints summary statistics (percentages) on Model Run
+    for key in results_stats_dic:
+        if key.startswith("p"):
+            print("{:20}: {:3f}".format(key, results_stats_dic[key]))
+    
+    # Misclassifications = incorrect dog classification
+    if print_incorrect_dogs and ((results_stats_dic['n_correct_dogs'] + results_stats_dic['n_correct_notdogs'])
+        != results_stats_dic['n_images']):
+        print("\n INCORRECT Dog/NOT Dog Assignments:")
+        
+        for key in results_dic:
+            if(sum(results_dic[key][3:]) == 1):
+                print("Real: {:>26}   Classifier: {:>30}".format(results_dic[key][0],
+                                                          results_dic[key][1]))
+                    
+    # Misclassification = incorrect breed classification
+    if print_incorrect_breed and (results_stats_dic['n_correct_dogs'] != results_stats_dic['n_correct_breed']):
+        print("\nINCORRECT Dog Breed Assignment:")
+        
+        for key in results_dic:
+            if(sum(results_dic[key][3:]) == 2 and results_dic[key][2] == 0):
+                print("Real: {:>26}   Classifier: {:>30}".format(results_dic[key][0],
+                                                          results_dic[key][1]))
+    
+    
+    
+    
+    
     None
                 

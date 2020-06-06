@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/classify_images.py
 #                                                                             
-# PROGRAMMER: 
-# DATE CREATED:                                 
+# PROGRAMMER: Jannai S. Babu
+# DATE CREATED: 6/3/2020                                
 # REVISED DATE: 
 # PURPOSE: Create a function classify_images that uses the classifier function 
 #          to create the classifier labels and then compares the classifier 
@@ -12,7 +12,7 @@
 #             and as in_arg.dir for function call within main. 
 #            -The results dictionary as results_dic within classify_images 
 #             function and results for the functin call within main.
-#            -The CNN model architecture as model within classify_images function
+#            -The CNN model architecture as model wihtin classify_images function
 #             and in_arg.arch for the function call within main. 
 #           This function uses the extend function to add items to the list 
 #           that's the 'value' of the results dictionary. You will be adding the
@@ -65,4 +65,24 @@ def classify_images(images_dir, results_dic, model):
      Returns:
            None - results_dic is mutable data type so no return needed.         
     """
+    
+    print("\n\n")
+    
+    for key, truth in results_dic.items():
+        test_image = images_dir+key
+        
+        # compute the result by passing in test image to the classifier
+        model_label = classifier(test_image, model)
+        
+        # format the classifier output string
+        model_label = model_label.lower().strip()       
+        
+        # compute match between truth and classification output
+        is_match = int(truth[0] in model_label)
+        
+        # update the results_dic
+        results_dic[key].append(model_label)
+        results_dic[key].append(is_match)           
+        
+        # print(is_match, "  : ", truth[0],"-->",model_label)    
     None 

@@ -1,0 +1,124 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 10 key-value pairs.
+Below are 10 of them:
+ 1 key:        Golden_retriever_01.jpg  label:           golden retriever
+ 2 key:              coffee_mug_01.jpg  label:                 coffee mug
+ 3 key:          great_pyrenees_01.jpg  label:             great pyrenees
+ 4 key:           black_panther_01.jpg  label:              black panther
+ 5 key:                Kangaroo_01.jpg  label:                   kangaroo
+ 6 key:        Golden_retriever_02.jpg  label:           golden retriever
+ 7 key:               chameleon_01.jpg  label:                  chameleon
+ 8 key:          great_pyrenees_02.jpg  label:             great pyrenees
+ 9 key:            people_boxes_01.jpg  label:               people boxes
+10 key:                     Cat_01.jpg  label:                        cat
+
+
+
+
+     MATCH:
+
+       Golden_retriever_01.jpg: 
+Real:           golden retriever   Classifier:               golden retriever
+
+             coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:                     coffee mug
+
+         great_pyrenees_01.jpg: 
+Real:             great pyrenees   Classifier:                 great pyrenees
+
+               Kangaroo_01.jpg: 
+Real:                   kangaroo   Classifier:        wallaby, brush kangaroo
+
+       Golden_retriever_02.jpg: 
+Real:           golden retriever   Classifier:               golden retriever
+
+         great_pyrenees_02.jpg: 
+Real:             great pyrenees   Classifier:                 great pyrenees
+
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:              egyptian cat, cat
+
+ NOT A MATCH:
+
+          black_panther_01.jpg: 
+Real:              black panther   Classifier: jaguar, panther, panthera onca, felis onca
+
+              chameleon_01.jpg: 
+Real:                  chameleon   Classifier:                         bubble
+
+           people_boxes_01.jpg: 
+Real:               people boxes   Classifier:                    rain barrel
+
+# Total Images 10 # Matches: 7 # NOT Matches: 3
+
+     MATCH:
+
+       Golden_retriever_01.jpg: 
+Real:           golden retriever   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+             coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:                     coffee mug  
+PetLabelDog: 0  ClassLabelDog: 0
+
+         great_pyrenees_01.jpg: 
+Real:             great pyrenees   Classifier:                 great pyrenees  
+PetLabelDog: 1  ClassLabelDog: 1
+
+               Kangaroo_01.jpg: 
+Real:                   kangaroo   Classifier:        wallaby, brush kangaroo  
+PetLabelDog: 0  ClassLabelDog: 0
+
+       Golden_retriever_02.jpg: 
+Real:           golden retriever   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+         great_pyrenees_02.jpg: 
+Real:             great pyrenees   Classifier:                 great pyrenees  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:              egyptian cat, cat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+          black_panther_01.jpg: 
+Real:              black panther   Classifier: jaguar, panther, panthera onca, felis onca  
+PetLabelDog: 0  ClassLabelDog: 0
+
+              chameleon_01.jpg: 
+Real:                  chameleon   Classifier:                         bubble  
+PetLabelDog: 0  ClassLabelDog: 0
+
+           people_boxes_01.jpg: 
+Real:               people boxes   Classifier:                    rain barrel  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 10 # Matches: 7 # NOT Matches: 3
+
+ ** Statistics from calculates_results_stats() function:
+N Images: 10  N Dog Images:  4  N NotDog Images:  6 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images: 10  N Dog Images:  4  N NotDog Images:  6 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed: 100.0
+
+
+*** Results Summary for CNN Model Architecture ALEXNET ***
+N Images            :  10
+N Dog Images        :   4
+N Not-Dog Images    :   6
+pct_match           : 70.000000
+pct_correct_dogs    : 100.000000
+pct_correct_breed   : 100.000000
+pct_correct_notdogs : 100.000000
+
+ 0.8001294136047363
+
+** Total Elapsed Runtime: 0:0:0
