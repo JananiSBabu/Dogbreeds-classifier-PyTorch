@@ -5,45 +5,45 @@ Command Line Arguments:
 
 Pet Image Label Dictionary has 10 key-value pairs.
 Below are 10 of them:
- 1 key:        Golden_retriever_01.jpg  label:           golden retriever
- 2 key:              coffee_mug_01.jpg  label:                 coffee mug
- 3 key:          great_pyrenees_01.jpg  label:             great pyrenees
- 4 key:           black_panther_01.jpg  label:              black panther
- 5 key:                Kangaroo_01.jpg  label:                   kangaroo
- 6 key:        Golden_retriever_02.jpg  label:           golden retriever
- 7 key:               chameleon_01.jpg  label:                  chameleon
+ 1 key:           black_panther_01.jpg  label:              black panther
+ 2 key:                     Cat_01.jpg  label:                        cat
+ 3 key:               chameleon_01.jpg  label:                  chameleon
+ 4 key:              coffee_mug_01.jpg  label:                 coffee mug
+ 5 key:        golden_retriever_01.jpg  label:           golden retriever
+ 6 key:        golden_retriever_02.jpg  label:           golden retriever
+ 7 key:          great_pyrenees_01.jpg  label:             great pyrenees
  8 key:          great_pyrenees_02.jpg  label:             great pyrenees
- 9 key:            people_boxes_01.jpg  label:               people boxes
-10 key:                     Cat_01.jpg  label:                        cat
+ 9 key:                Kangaroo_01.jpg  label:                   kangaroo
+10 key:            people_boxes_01.jpg  label:               people boxes
 
 
 
 
      MATCH:
 
-       Golden_retriever_01.jpg: 
-Real:           golden retriever   Classifier:               golden retriever
-
-             coffee_mug_01.jpg: 
-Real:                 coffee mug   Classifier:                     coffee mug
-
-         great_pyrenees_01.jpg: 
-Real:             great pyrenees   Classifier:                 great pyrenees
-
-               Kangaroo_01.jpg: 
-Real:                   kangaroo   Classifier:        wallaby, brush kangaroo
-
-       Golden_retriever_02.jpg: 
-Real:           golden retriever   Classifier:               golden retriever
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:              egyptian cat, cat
 
               chameleon_01.jpg: 
 Real:                  chameleon   Classifier: african chameleon, chamaeleo chamaeleon
 
+             coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:                     coffee mug
+
+       golden_retriever_01.jpg: 
+Real:           golden retriever   Classifier:               golden retriever
+
+       golden_retriever_02.jpg: 
+Real:           golden retriever   Classifier:               golden retriever
+
+         great_pyrenees_01.jpg: 
+Real:             great pyrenees   Classifier:                 great pyrenees
+
          great_pyrenees_02.jpg: 
 Real:             great pyrenees   Classifier:                 great pyrenees
 
-                    Cat_01.jpg: 
-Real:                        cat   Classifier:              egyptian cat, cat
+               Kangaroo_01.jpg: 
+Real:                   kangaroo   Classifier:        wallaby, brush kangaroo
 
  NOT A MATCH:
 
@@ -57,36 +57,36 @@ Real:               people boxes   Classifier:                         carton
 
      MATCH:
 
-       Golden_retriever_01.jpg: 
-Real:           golden retriever   Classifier:               golden retriever  
-PetLabelDog: 1  ClassLabelDog: 1
-
-             coffee_mug_01.jpg: 
-Real:                 coffee mug   Classifier:                     coffee mug  
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:              egyptian cat, cat  
 PetLabelDog: 0  ClassLabelDog: 0
-
-         great_pyrenees_01.jpg: 
-Real:             great pyrenees   Classifier:                 great pyrenees  
-PetLabelDog: 1  ClassLabelDog: 1
-
-               Kangaroo_01.jpg: 
-Real:                   kangaroo   Classifier:        wallaby, brush kangaroo  
-PetLabelDog: 0  ClassLabelDog: 0
-
-       Golden_retriever_02.jpg: 
-Real:           golden retriever   Classifier:               golden retriever  
-PetLabelDog: 1  ClassLabelDog: 1
 
               chameleon_01.jpg: 
 Real:                  chameleon   Classifier: african chameleon, chamaeleo chamaeleon  
 PetLabelDog: 0  ClassLabelDog: 0
 
+             coffee_mug_01.jpg: 
+Real:                 coffee mug   Classifier:                     coffee mug  
+PetLabelDog: 0  ClassLabelDog: 0
+
+       golden_retriever_01.jpg: 
+Real:           golden retriever   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+       golden_retriever_02.jpg: 
+Real:           golden retriever   Classifier:               golden retriever  
+PetLabelDog: 1  ClassLabelDog: 1
+
+         great_pyrenees_01.jpg: 
+Real:             great pyrenees   Classifier:                 great pyrenees  
+PetLabelDog: 1  ClassLabelDog: 1
+
          great_pyrenees_02.jpg: 
 Real:             great pyrenees   Classifier:                 great pyrenees  
 PetLabelDog: 1  ClassLabelDog: 1
 
-                    Cat_01.jpg: 
-Real:                        cat   Classifier:              egyptian cat, cat  
+               Kangaroo_01.jpg: 
+Real:                   kangaroo   Classifier:        wallaby, brush kangaroo  
 PetLabelDog: 0  ClassLabelDog: 0
 
  NOT A MATCH:
@@ -119,6 +119,6 @@ pct_correct_dogs    : 100.000000
 pct_correct_breed   : 100.000000
 pct_correct_notdogs : 100.000000
 
- 8.304710865020752
+ 4.8726887702941895
 
-** Total Elapsed Runtime: 0:0:8
+** Total Elapsed Runtime: 0:0:4
