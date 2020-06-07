@@ -47,6 +47,9 @@ def get_pet_labels(image_dir):
     file_list = listdir(image_dir)
     
     for item in file_list:
+        if item.startswith("."):
+            print("hidden file")
+            continue
         splitnames = item.split('.')[0].split('_')[:-1]
         label = " ".join(splitnames).lower().strip()
         results_dic[item]=[label]
